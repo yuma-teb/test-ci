@@ -1,4 +1,4 @@
-export default {
+module.exports = {
 	extends: ["@commitlint/config-conventional"],
 	/*
 	 * Array of functions that return true if commitlint should ignore the given message.
@@ -23,6 +23,7 @@ export default {
 			2,
 			"always",
 			[
+				"init",
 				// Changes that affect the build system or dependency-only changes
 				"build",
 				// Changes to CI workflows
