@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
 
+# Update husky scripts
 ENV HUSKY=0
 RUN npm install --production
 
