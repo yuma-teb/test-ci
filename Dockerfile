@@ -1,17 +1,19 @@
-# Use official Node.js image
+# Use the official Node.js image
 FROM node:18-alpine
 
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies
+# Copy package.json and package-lock.json
 COPY package.json package-lock.json ./
-RUN npm install
 
-# Copy the rest of the application
+# Install dependencies
+RUN npm install --production
+
+# Copy the entire application
 COPY . .
 
-# Build the Next.js app
+# Build the Next.js application
 RUN npm run build
 
 # Expose port 3000
