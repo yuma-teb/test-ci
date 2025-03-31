@@ -46,10 +46,10 @@ pipeline {
 
     post {
         success {
-            echo 'Build completed successfully!'
+            echo 'Build completed successfully! change the logs'
         }
         failure {
-            echo 'Build failed. Check the logs!'
+            echo 'Build failed. Check the logs! '
         }
     }
 }
